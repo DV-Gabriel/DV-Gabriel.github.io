@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Experiencia | Gabriel Del Valle</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <main>
+
+        <section class="experiencia-section">
+            <section class="experiencia-header">
+            <h2 class="section-title">Experiencia</h2>
+            <a href="index.html" class="btn-regresar"> ← Regresar</a>
+            </section>
+            <!-- PROYECTOS -->
+            <section class="experiencia-bloque">
+                <h3>Proyectos académicos y personales</h3>
+
+                <div class="experiencia-card">
+                    <h4>Desarrollador - SimuladorDataCenter JAVA</h4>
+                    <span class="experiencia-fecha">2024</span>
+                    <ul>
+                        <li>Implementación en POO.</li>
+                        <li>Implementación de validaciones.</li>
+                        <li>Código modular y documentado.</li>
+                    </ul>
+                </div>
+
+                <div class="experiencia-card">
+                    <h4>Proceso ETL con Pentaho</h4>
+                    <span class="experiencia-fecha">2025</span>
+                    <p>
+                        Implementación de un proceso ETL integrando datos desde MariaDB, PostgreSQL, XML, XLSX y CSV.
+                    </p>
+                    <ul>
+                        <li>Pentaho Data Integration</li>
+                        <li>SQL</li>
+                        <li>Excel</li>
+                    </ul>
+                </div>
+
+                <div class="experiencia-card">
+                    <h4>Desarrollador - Frontend Tienda Virtual More Power</h4>
+                    <span class="experiencia-fecha">2025</span>
+                    <p>
+                        Desarrollo del frontend de una tienda virtual de ropa racing.
+                    <ul>
+                        <li>Implementación HTML/CSS.</li>
+                        <li>Diseño responsivo con interfaz amigable.</li>
+                    </ul>
+                </div>
+
+                <div class="experiencia-card">
+                    <h4>Proceso ETL + DashBoard</h4>
+                    <span class="experiencia-fecha">2026</span>
+                    <p>
+                        Desarrollo de DashBoard en PowerBI con datos integrados desde un proceso ETL implementado en Pentaho.
+                    <ul>
+                        <li>Modelo de datos contelación.</li>
+                        <li>Visualizaciones interactivas.</li>
+                        <li>Más de 1 millón de datos.</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+
+
+
+            </section>
+
+
+            <!-- CERTIFICACIONES -->
+            <section class="experiencia-bloque">
+                <h3>Certificaciones</h3>
+
+                <div class="slider-certificados">
+
+                    <button class="slider-btn prev" onclick="moverSlide(-1)">&#10094;</button>
+
+                    <div class="slider-viewport">
+                        <div class="slider-track" id="sliderTrack">
+
+                            <!-- CERTIFICADO 1 -->
+                            <div class="certificacion-slide">
+                                <img src="certificados/JISIC2025.png" alt="Certificado JISIC2025">
+                                <h4>Fundamentos y Tendencias de la Inteligencia Artificial</h4>
+                                <p>Escuela Politécnica Nacional - 2025</p>
+                                <a class="btn-ver" href="certificados/JISIC2025.pdf" target="_blank">Ver PDF</a>
+                            </div>
+
+                            <!-- CERTIFICADO 2 -->
+                            <div class="certificacion-slide">
+                                <img src="certificados/DataScienceEssentialswithPython_Gabriel Del Valle.png"
+                                    alt="Certificado Ciencia de Datos con Python">
+                                <h4>Data Science Essentials with Python</h4>
+                                <p>Cisco · 2025</p>
+                                <a class="btn-ver" href="certificados/DataScienceEssentialswithPython_Gabriel Del Valle.pdf"
+                                    target="_blank">Ver PDF</a>
+                            </div>
+
+                            <!-- AGREGA MÁS AQUÍ -->
+                            <div class="certificacion-slide">
+                                <img src="certificados/DataAnalyticsEssentials_Gabriel Del Valle.png"
+                                    alt="Certificado Ciencia de Datos con Python">
+                                <h4>Data Analytics Essentials</h4>
+                                <p>Cisco · 2025</p>
+                                <a class="btn-ver" href="certificados/DataAnalyticsEssentialsUpdate20250919-31-7cfioe.pdf"
+                                    target="_blank">Ver PDF</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="slider-btn next" onclick="moverSlide(1)">&#10095;</button>
+
+                </div>
+            </section>
+    </main>
+
+    <script>
+        let indice = 0;
+        const anchoSlide = 720;
+
+        function moverSlide(direccion) {
+            const track = document.getElementById("sliderTrack");
+            const slides = document.querySelectorAll(".certificacion-slide");
+            const totalSlides = slides.length;
+
+            indice += direccion;
+
+            if (indice < 0) indice = totalSlides - 1;
+            if (indice >= totalSlides) indice = 0;
+
+            track.style.transform = `translateX(-${indice * anchoSlide}px)`;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

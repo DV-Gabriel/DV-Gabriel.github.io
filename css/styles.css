@@ -1,0 +1,459 @@
+:root{
+    --color-fondo: #0F172A;
+    --color-fondo-claro: #1E293B;
+    --color-texto: #E5E7EB;
+    --color-texto-oscuro: #94A3B8;
+    --color-acentos: #3B82F6;
+    --color-detalles: #60A5FA;
+    --funte-principal: 'Inter', sans-serif;;
+    
+}
+
+*{
+    font-family: var(--funte-principal);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+}
+
+hr{
+    background-color: var(--color-acentos);
+}
+
+
+.nav-contacto{
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto-oscuro);
+    padding: 20px 20px;
+    margin: 0 0;
+}
+
+.nav-contacto ul{
+    background-color: var(--color-fondo-claro);
+    text-decoration: none;
+    display: flex;
+    gap: 40px;
+    justify-content:space-between;
+    margin: 0;
+    padding: 0 ;
+}
+.nav-contacto ul a{
+    text-decoration: none;
+    background: var(--color-fondo-claro);
+    color: var(--color-texto);
+    padding: 10px;
+    margin: 0;
+}
+
+.nav-contacto ul a img{
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.nav-contacto ul a:hover{
+    color: var(--color-acentos);
+}
+
+
+
+.informacion{
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 15px;
+}
+
+.informacion h2{
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--color-texto-oscuro);
+}
+
+.contenedor-informacion{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 20px;
+    align-items: center;
+}
+
+.contenedor-informacion img{
+    border-radius: 50%;
+    /* Make image square and center it inside its grid cell */
+    width: 250px;
+    height: 250px;
+    border: 5px solid var(--color-acentos);
+    justify-self: center;
+    display: block;
+    margin: 0 auto;
+}
+.contenedor-informacion h4{
+    color: var(--color-texto-oscuro);
+    font-size: 24px;
+    font-weight: bold;
+}
+.contenedor-informacion p{
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+.experiencia{
+    background: var(--color-fondo);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-experiencia{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--color-fondo-claro);
+    border-radius: 8px; 
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    justify-self: center;   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-experiencia h3{
+    color: var(--color-acentos);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-experiencia img{
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+}
+
+.separador{
+    border: 2px solid var(--color-fondo-claro);
+}
+
+.experiencia-header, .portafolio-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.btn-experiencia{
+    background-color: var(--color-acentos);
+    color: var(--color-texto);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-experiencia:hover{
+    background-color: var(--color-detalles);
+    color: #0F172A;
+}
+
+
+.btn-regresar{
+    margin-left: 20px;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: var(--color-acentos);
+    color: var(--color-texto);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-regresar:hover{
+    background-color: var(--color-detalles);
+    color: #0F172A;
+}
+
+/* =========================
+   SECCIÓN SOBRE MÍ (TABLA)
+   ========================= */
+
+.about-section {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 40px 20px;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 20px;
+}
+
+.about-intro {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-texto);
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+/* Wrapper para responsive */
+.about-table-wrapper {
+    overflow-x: auto;
+}
+
+/* Tabla */
+.about-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-fondo-claro);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Filas */
+.about-table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.about-table tr:last-child {
+    border-bottom: none;
+}
+
+/* Columna izquierda */
+.about-table th {
+    text-align: left;
+    padding: 16px 20px;
+    width: 30%;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-acentos);
+    background-color: rgba(255, 255, 255, 0.02);
+    vertical-align: top;
+}
+
+/* Columna derecha */
+.about-table td {
+    padding: 16px 20px;
+    font-size: 16px;
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Hover sutil */
+.about-table tr:hover {
+    background-color: rgba(96, 165, 250, 0.05);
+}
+
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .about-intro {
+        font-size: 16px;
+    }
+
+    .about-table th,
+    .about-table td {
+        padding: 14px;
+        font-size: 15px;
+    }
+}
+
+/* Diseños Experiencia*/
+
+.section-title{
+    color: var(--color-texto);
+    font-size: 48px;
+    padding: 15px;
+    margin: 50px;
+}
+
+.experiencia-card{
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px;
+    border: solid 1px var(--color-fondo-claro);
+}
+
+.experiencia-bloque h3{
+    color: var(--color-acentos);
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.experiencia-card h4{
+    color: var(--color-texto-oscuro);
+    font-weight: bold;
+    font-size: 28px;
+}
+
+
+/* ===== SLIDER CERTIFICADOS ===== */
+
+.slider-certificados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.slider-viewport {
+    width: 720px;              
+    overflow: hidden;          
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.certificacion-slide {
+    min-width: 720px;          
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+}
+
+.certificacion-slide img {
+    width: 100%;
+    max-height: 360px;   
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+
+.certificacion-slide h4 {
+    margin: 10px 0 4px;
+}
+
+.certificacion-slide a {
+    display: inline-block;
+    margin-top: 6px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Botones */
+.slider-btn {
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #fff; 
+}
+
+.slider-btn:hover {
+    transform: scale(1.1);
+}
+
+.slider-certificados{
+    color: var(--color-texto);
+}
+
+.btn-ver{
+    background: var(--color-acentos);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--color-texto);
+}
+
+.btn-ver:hover{
+    background: var(--color-detalles);
+    color: #0F172A;
+}
+
+.portafolio-card {
+    display: grid;
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px;
+    font-size: 18px;
+}
+
+.portafolio-bloque h3{
+    color: var(--color-texto);
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.portafolio-card h4{
+    color: var(--color-acentos);
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.portafolio-card img{
+    width: 60%;
+    align-items: center;
+    text-align: center; 
+    justify-self: center;
+    margin: 20px;
+    border: solid 4px var(--color-detalles);
+    border-radius: 12px;
+}
+
+.dashboard-images {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    
+}
+
+.dashboard-images img {
+    width: 45%;
+}
+
+.btn-repositorio{
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    background: var(--color-acentos);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--color-texto);
+    margin-top: 10px;
+    justify-self: center;
+}
+
+.btn-repositorio:hover{
+    background: var(--color-detalles);
+    color: #0F172A;
+}
+
+.delencanto-images{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.delencanto-images img{
+    width: 80%;
+    height: auto;
+}
