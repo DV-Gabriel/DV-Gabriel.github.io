@@ -1,12 +1,35 @@
 :root{
-    --color-fondo: #0F172A;
-    --color-fondo-claro: #1E293B;
-    --color-texto: #E5E7EB;
-    --color-texto-oscuro: #94A3B8;
-    --color-acentos: #3B82F6;
-    --color-detalles: #60A5FA;
-    --funte-principal: 'Inter', sans-serif;;
-    
+
+    /* ============================
+       PALETA MIXTA — Carbón + Dorado
+       Header/footer oscuro, contenido claro,
+       un único acento (dorado/bronce) reservado
+       para detalles, CTAs y elementos clave.
+       ============================ */
+
+    /* Fondos */
+    --color-fondo: #F4F3F0;              /* fondo de secciones de contenido (claro) */
+    --color-fondo-card: #FFFFFF;         /* tarjetas sobre el fondo claro */
+    --color-fondo-oscuro: #1B1D22;       /* hero, header/footer, nav-contacto */
+    --color-fondo-oscuro-suave: #272A30; /* hover / paneles dentro de zonas oscuras */
+
+    /* Texto */
+    --color-texto: #24262B;                    /* texto principal sobre fondo claro */
+    --color-texto-secundario: #62666D;         /* texto secundario sobre fondo claro */
+    --color-texto-claro: #ECEBE8;              /* texto principal sobre fondo oscuro */
+    --color-texto-claro-secundario: #9A9DA3;   /* texto secundario sobre fondo oscuro */
+
+    /* Acento único (dorado/bronce) */
+    --color-acento: #C99A3E;        /* fondos de botones, insignias, bordes decorativos */
+    --color-acento-hover: #A87D2E;  /* estado hover de los elementos con --color-acento */
+    --color-acento-suave: #F1E3C5;  /* tinte pálido — fondos suaves, badges detrás de logos */
+    --color-acento-texto: #8C5A1E;  /* acento usado como TEXTO sobre fondo claro (cumple contraste AA) */
+
+    /* Utilidad */
+    --color-borde: rgba(0, 0, 0, 0.08); /* divisores y bordes sutiles sobre fondo claro */
+
+    --funte-principal: 'Inter', sans-serif;
+
 }
 
 *{
@@ -20,19 +43,21 @@ body{
 }
 
 hr{
-    background-color: var(--color-acentos);
+    background-color: var(--color-acento);
+    border: none;
+    height: 2px;
 }
 
 
 .nav-contacto{
-    background-color: var(--color-fondo-claro);
-    color: var(--color-texto-oscuro);
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-claro-secundario);
     padding: 20px 20px;
     margin: 0 0;
 }
 
 .nav-contacto ul{
-    background-color: var(--color-fondo-claro);
+    background-color: var(--color-fondo-oscuro);
     text-decoration: none;
     display: flex;
     gap: 40px;
@@ -42,8 +67,8 @@ hr{
 }
 .nav-contacto ul a{
     text-decoration: none;
-    background: var(--color-fondo-claro);
-    color: var(--color-texto);
+    background: var(--color-fondo-oscuro);
+    color: var(--color-texto-claro);
     padding: 10px;
     margin: 0;
 }
@@ -56,21 +81,21 @@ hr{
 }
 
 .nav-contacto ul a:hover{
-    color: var(--color-acentos);
+    color: var(--color-acento);
 }
 
 
 
 .informacion{
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-claro);
     padding: 15px;
 }
 
 .informacion h2{
     font-size: 36px;
     font-weight: bold;
-    color: var(--color-texto-oscuro);
+    color: var(--color-texto-claro);
 }
 
 .contenedor-informacion{
@@ -85,13 +110,13 @@ hr{
     /* Make image square and center it inside its grid cell */
     width: 250px;
     height: 250px;
-    border: 5px solid var(--color-acentos);
+    border: 5px solid var(--color-acento);
     justify-self: center;
     display: block;
     margin: 0 auto;
 }
 .contenedor-informacion h4{
-    color: var(--color-texto-oscuro);
+    color: var(--color-acento);
     font-size: 24px;
     font-weight: bold;
 }
@@ -113,29 +138,38 @@ hr{
 .card-experiencia{
     display: grid;
     grid-template-columns: 1fr;
-    background-color: var(--color-fondo-claro);
+    background-color: var(--color-fondo-card);
+    border: 1px solid var(--color-borde);
     border-radius: 8px; 
     margin: 20px;
     padding: 20px;
     text-align: center;
     justify-self: center;   
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 50%;
 }
 
 .card-experiencia h3{
-    color: var(--color-acentos);
+    color: var(--color-acento-texto);
     font-size: 24px;
     margin-bottom: 10px;
 }
 
 .card-experiencia img{
-    width: 250px;
-    height: 250px;
-    padding: 10px;
+    width: 180px;
+    height: 180px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--color-acento-suave);
+    border-radius: 45%;
+    object-fit: contain;
+    justify-self: center;
 }
 
 .separador{
-    border: 2px solid var(--color-fondo-claro);
+    border: none;
+    height: 1px;
+    background-color: var(--color-borde);
 }
 
 .experiencia-header, .portafolio-header{
@@ -143,12 +177,13 @@ hr{
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    margin: 20px;
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-claro);
 }
 
 .btn-experiencia{
-    background-color: var(--color-acentos);
-    color: var(--color-texto);
+    background-color: var(--color-acento);
+    color: var(--color-fondo-oscuro);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -158,8 +193,7 @@ hr{
 }
 
 .btn-experiencia:hover{
-    background-color: var(--color-detalles);
-    color: #0F172A;
+    background-color: var(--color-acento-hover);
 }
 
 
@@ -167,8 +201,8 @@ hr{
     margin-left: 20px;
     margin-top: 30px;
     padding: 10px 20px;
-    background-color: var(--color-acentos);
-    color: var(--color-texto);
+    background-color: var(--color-acento);
+    color: var(--color-fondo-oscuro);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -178,8 +212,7 @@ hr{
 }
 
 .btn-regresar:hover{
-    background-color: var(--color-detalles);
-    color: #0F172A;
+    background-color: var(--color-acento-hover);
 }
 
 /* =========================
@@ -200,9 +233,17 @@ hr{
 .section-title {
     font-size: 36px;
     font-weight: bold;
-    color: var(--color-texto-oscuro);
-    margin-bottom: 20px;
+    color: var(--color-texto-claro);
+    margin: 0 0 20px;
+    padding: 10px 20px;
 }
+
+.section-subtitle{
+    font-size: 20px;
+    color: var(--color-texto-secundario);
+    margin: 0 0 30px;
+}
+
 
 .about-intro {
     font-size: 18px;
@@ -221,14 +262,15 @@ hr{
 .about-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: var(--color-fondo-claro);
+    background-color: var(--color-fondo-card);
+    border: 1px solid var(--color-borde);
     border-radius: 8px;
     overflow: hidden;
 }
 
 /* Filas */
 .about-table tr {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--color-borde);
 }
 
 .about-table tr:last-child {
@@ -242,8 +284,8 @@ hr{
     width: 30%;
     font-size: 16px;
     font-weight: 600;
-    color: var(--color-acentos);
-    background-color: rgba(255, 255, 255, 0.02);
+    color: var(--color-acento-texto);
+    background-color: rgba(0, 0, 0, 0.02);
     vertical-align: top;
 }
 
@@ -257,7 +299,7 @@ hr{
 
 /* Hover sutil */
 .about-table tr:hover {
-    background-color: rgba(96, 165, 250, 0.05);
+    background-color: var(--color-acento-suave);
 }
 
 
@@ -277,33 +319,27 @@ hr{
     }
 }
 
-/* Diseños Experiencia*/
-
-.section-title{
-    color: var(--color-texto);
-    font-size: 48px;
-    padding: 15px;
-    margin: 50px;
-}
+/* Diseños Experiencia */
 
 .experiencia-card{
-    background-color: var(--color-fondo-claro);
+    background-color: var(--color-fondo-card);
     color: var(--color-texto);
     padding: 20px;
     border-radius: 8px;
     margin: 30px;
-    border: solid 1px var(--color-fondo-claro);
+    border: 1px solid var(--color-borde);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .experiencia-bloque h3{
-    color: var(--color-acentos);
+    color: var(--color-acento-texto);
     font-size: 32px;
     font-weight: bold;
     margin: 20px;
 }
 
 .experiencia-card h4{
-    color: var(--color-texto-oscuro);
+    color: var(--color-texto-secundario);
     font-weight: bold;
     font-size: 28px;
 }
@@ -341,11 +377,14 @@ hr{
     max-height: 360px;   
     object-fit: contain;
     border-radius: 10px;
+    margin-bottom: 30px;
+    /* border: 1px solid var(--color-borde); */
 }
 
 
 .certificacion-slide h4 {
     margin: 10px 0 4px;
+    color: var(--color-texto);
 }
 
 .certificacion-slide a {
@@ -353,6 +392,7 @@ hr{
     margin-top: 6px;
     font-weight: bold;
     text-decoration: none;
+    color: var(--color-acento-texto);
 }
 
 /* Botones */
@@ -361,11 +401,12 @@ hr{
     border: none;
     font-size: 2.2rem;
     cursor: pointer;
-    color: #fff; 
+    color: var(--color-acento-texto); 
 }
 
 .slider-btn:hover {
     transform: scale(1.1);
+    color: var(--color-acento-hover);
 }
 
 .slider-certificados{
@@ -373,25 +414,26 @@ hr{
 }
 
 .btn-ver{
-    background: var(--color-acentos);
+    background: var(--color-acento);
     padding: 10px;
     border-radius: 5px;
-    color: var(--color-texto);
+    color: var(--color-fondo-oscuro);
 }
 
 .btn-ver:hover{
-    background: var(--color-detalles);
-    color: #0F172A;
+    background: var(--color-acento-hover);
 }
 
 .portafolio-card {
     display: grid;
-    background-color: var(--color-fondo-claro);
+    background-color: var(--color-fondo-card);
     color: var(--color-texto);
     padding: 20px;
     border-radius: 8px;
     margin: 30px;
     font-size: 18px;
+    border: 1px solid var(--color-borde);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .portafolio-bloque h3{
@@ -402,7 +444,7 @@ hr{
 }
 
 .portafolio-card h4{
-    color: var(--color-acentos);
+    color: var(--color-acento-texto);
     font-size: 32px;
     font-weight: bold;
     margin: 20px;
@@ -414,7 +456,7 @@ hr{
     text-align: center; 
     justify-self: center;
     margin: 20px;
-    border: solid 4px var(--color-detalles);
+    border: solid 3px var(--color-acento-suave);
     border-radius: 12px;
 }
 
@@ -428,23 +470,25 @@ hr{
 
 .dashboard-images img {
     width: 45%;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .btn-repositorio{
     text-align: center;
     text-decoration: none;
     width: 150px;
-    background: var(--color-acentos);
+    background: var(--color-acento);
     padding: 10px;
     border-radius: 5px;
-    color: var(--color-texto);
+    color: var(--color-fondo-oscuro);
     margin-top: 10px;
     justify-self: center;
 }
 
 .btn-repositorio:hover{
-    background: var(--color-detalles);
-    color: #0F172A;
+    background: var(--color-acento-hover);
 }
 
 .delencanto-images{
@@ -456,4 +500,7 @@ hr{
 .delencanto-images img{
     width: 80%;
     height: auto;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
