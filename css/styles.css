@@ -85,6 +85,38 @@ hr{
 }
 
 
+/* Tablets */
+@media (max-width: 768px){
+    .nav-contacto ul{
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px){
+    .nav-contacto ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-contacto ul a{
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-contacto ul a img{
+        width: 24px;
+        height: 24px;
+    }
+}
+
 
 .informacion{
     background-color: var(--color-fondo-oscuro);
@@ -126,6 +158,21 @@ hr{
     text-align: justify;
 }
 
+@media (max-width: 768px) {
+    .contenedor-informacion{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contenedor-informacion img{
+        width: 180px;
+        height: 180px;
+    }
+
+    .contenedor-informacion p{
+        text-align: left;
+    }
+}
 
 .experiencia{
     background: var(--color-fondo);
@@ -164,6 +211,22 @@ hr{
     border-radius: 45%;
     object-fit: contain;
     justify-self: center;
+}
+
+@media (max-width: 768px) {
+    .contenedor-informacion{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contenedor-informacion img{
+        width: 180px;
+        height: 180px;
+    }
+
+    .contenedor-informacion p{
+        text-align: left;
+    }
 }
 
 .separador{
