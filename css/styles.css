@@ -278,6 +278,32 @@ hr{
     background-color: var(--color-acento-hover);
 }
 
+
+.btn-resumen{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--color-acento);
+    color: var(--color-fondo-oscuro);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    width: 25%;
+}
+
+.btn-resumen:hover{
+    background-color: var(--color-acento-hover);
+    color: var(--color-fondo-oscuro);
+}
+
+.btn-resumen a{
+    text-decoration: none;
+    color: var(--color-fondo-oscuro);
+}
+
 /* =========================
    SECCIÓN SOBRE MÍ (TABLA)
    ========================= */
